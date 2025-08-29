@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="rounded-4 overflow-hidden shadow-sm">
+      <img class="w-100" src="{{ poi['image'] }}" alt="{{ poi['name'] }}">
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <h2 class="h3">{{ poi['name'] }}</h2>
+    <p class="text-muted">{{ poi['area'] }} • {{ poi['category'] }}</p>
+    <p>{{ poi['description'] }}</p>
+    <ul class="list-unstyled small">
+      <li><strong>Best time:</strong> {{ poi['best_time'] }}</li>
+      <li><strong>Open hours:</strong> {{ poi['hours'] }}</li>
+      <li><strong>Ticket:</strong> {{ poi['ticket'] }}</li>
+    </ul>
+    <a class="btn btn-primary" href="{{ url_for('ar_view') }}">View in AR</a>
+    <a class="btn btn-outline-secondary" href="{{ url_for('explore') }}">Back</a>
+  </div>
+</div>
+{% endblock %}

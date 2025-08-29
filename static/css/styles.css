@@ -1,0 +1,27 @@
+:root {
+  --radius: 1.25rem;
+}
+
+.hero-card img {
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+.card img {
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+.fixed-carousel {
+  width: 100%;
+  height: 400px; /* 👈 fixed height */
+}
+
+.fixed-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ensures the image fills the box without stretching */
+}
+
+.rounded-4 { border-radius: var(--radius)!important; }
+.shadow-sm { box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05)!important; }
